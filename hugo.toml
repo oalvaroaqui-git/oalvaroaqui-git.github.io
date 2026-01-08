@@ -1,0 +1,21 @@
+baseURL = 'https://oalvaroaqui.xyz/'
+languageCode = 'pt-br'
+title = 'Dev & Ops Blog'
+theme = 'PaperMod'
+
+[params]
+    defaultTheme = "auto"
+    showCodeCopyButtons = true
+
+    [params.profileMode]
+        enabled = true
+        title = "Álvaro"
+        subtitle = "Estudante de .NET, Kubernetes e Monitoramento"
+
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/seu-usuario"
+
+    [[params.socialIcons]]
+        name = "linkedin"
+        url = "https://linkedin.com/in/seu-usuario"
