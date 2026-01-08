@@ -14,7 +14,7 @@ theme = 'PaperMod'
 
     [[params.socialIcons]]
         name = "github"
-        url = "https://github.com/seu-usuario"
+        url = "https://github.com/oalvaroaqui-git"
 
     [[params.socialIcons]]
         name = "linkedin"
