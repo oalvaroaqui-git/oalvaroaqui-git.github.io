@@ -1,16 +1,30 @@
 baseURL = 'https://oalvaroaqui.xyz/'
 languageCode = 'pt-br'
-title = 'Dev & Ops Blog'
+title = 'oalvaroaqui'
 theme = 'PaperMod'
 
 [params]
     defaultTheme = "auto"
     showCodeCopyButtons = true
+    ShowFullTextContent = false 
+    displayFullPostContent = false
+    ShowReadingTime = true
+    ShowPostNavLinks = true
+    layout = "list"
+
+    [params.cover]
+        responsiveimages = true
+        linkFullimages = false
+
 
     [params.profileMode]
         enabled = true
-        title = "Álvaro"
-        subtitle = "Estudante de .NET, Kubernetes e Monitoramento"
+        title = "Álvaro Moura"
+        subtitle = "Sou Site Reliability Engineer (SRE) com atuação em ambientes on-premises e cloud, com forte foco em AWS, onde possuo certificação AWS Certified Solutions Architect – Associate (SAA).Tenho sólida experiência em observabilidade (o11y), com amplo domínio de ferramentas como Prometheus, Grafana, Datadog, New Relic, AppDynamics e Jaeger, aplicadas a sistemas distribuídos e ambientes críticos.Possuo certificações na área de confiabilidade e monitoramento, e atualmente direciono meus estudos para o uso de Inteligência Artificial aplicada à observabilidade."
+        imageUrl = "images/fotosite.png" # Caminho relativo à pasta static
+        imageTitle = "Álvaro"           # Texto que aparece ao passar o mouse
+        imageWidth = 250                # Tamanho da foto (ajuste conforme preferir)
+        imageHeight = 250
 
     [[params.socialIcons]]
         name = "github"
@@ -18,4 +32,13 @@ theme = 'PaperMod'
 
     [[params.socialIcons]]
         name = "linkedin"
-        url = "https://linkedin.com/in/seu-usuario"
+        url = "https://linkedin.com/in/alvaromoura86"
+    
+    [menus]
+  [[menus.main]]
+    name = 'Artigos'
+    url = '/posts'
+    weight = 10
+
+
+

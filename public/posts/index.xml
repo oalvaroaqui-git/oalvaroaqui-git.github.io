@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Dev &amp; Ops Blog</title>
+    <title>Posts on oalvaroaqui</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Dev &amp; Ops Blog</description>
+    <description>Recent content in Posts on oalvaroaqui</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 08 Jan 2026 14:14:55 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 14:20:09 -0300</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Meu Novo Estudo</title>
-      <link>http://localhost:1313/posts/meu-novo-estudo/</link>
-      <pubDate>Thu, 08 Jan 2026 14:14:55 -0300</pubDate>
-      <guid>http://localhost:1313/posts/meu-novo-estudo/</guid>
-      <description></description>
+      <title>SRE ou Site Reliability Engineering: Da criação no Google à era da IA (com breves incursões ao Mundo Invertido)</title>
+      <link>http://localhost:1313/posts/o-que-e-o-sre/</link>
+      <pubDate>Thu, 08 Jan 2026 14:20:09 -0300</pubDate>
+      <guid>http://localhost:1313/posts/o-que-e-o-sre/</guid>
+      <description>&lt;h1 id=&#34;site-reliability-engineering&#34;&gt;Site Reliability Engineering&lt;/h1&gt;
+&lt;h2 id=&#34;da-criação-no-google-à-era-da-ia-com-breves-incursões-ao-mundo-invertido&#34;&gt;Da criação no Google à era da IA (com breves incursões ao Mundo Invertido)&lt;/h2&gt;
+&lt;p&gt;Sistemas modernos são distribuídos, complexos e inevitavelmente falhos.&lt;br&gt;
+A pergunta nunca foi &lt;em&gt;“se”&lt;/em&gt; algo vai quebrar, mas &lt;em&gt;“quando”&lt;/em&gt; — e o que você fará quando isso acontecer.&lt;/p&gt;
+&lt;p&gt;É nesse cenário que nasce o &lt;strong&gt;Site Reliability Engineering (SRE)&lt;/strong&gt;: uma disciplina que une engenharia de software, operações e confiabilidade, com o objetivo de manter sistemas estáveis &lt;strong&gt;mesmo quando o caos tenta atravessar para produção&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Entendendo Kubernetes Services</title>
-      <link>http://localhost:1313/posts/entendendo-kubernetes-services/</link>
-      <pubDate>Thu, 08 Jan 2026 11:13:21 -0300</pubDate>
-      <guid>http://localhost:1313/posts/entendendo-kubernetes-services/</guid>
+      <title></title>
+      <link>http://localhost:1313/posts/girusio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/girusio/</guid>
       <description></description>
     </item>
   </channel>

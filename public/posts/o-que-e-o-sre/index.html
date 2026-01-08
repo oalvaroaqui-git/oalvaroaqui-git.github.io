@@ -5,12 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Entendendo Kubernetes Services | oalvaroaqui</title>
+<title>SRE ou Site Reliability Engineering: Da criação no Google à era da IA (com breves incursões ao Mundo Invertido) | oalvaroaqui</title>
 <meta name="keywords" content="">
-<meta name="description" content="Entendendo Kubernetes Services - oalvaroaqui">
+<meta name="description" content="Site Reliability Engineering
+Da criação no Google à era da IA (com breves incursões ao Mundo Invertido)
+Sistemas modernos são distribuídos, complexos e inevitavelmente falhos.
+A pergunta nunca foi “se” algo vai quebrar, mas “quando” — e o que você fará quando isso acontecer.
+É nesse cenário que nasce o Site Reliability Engineering (SRE): uma disciplina que une engenharia de software, operações e confiabilidade, com o objetivo de manter sistemas estáveis mesmo quando o caos tenta atravessar para produção.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/entendendo-kubernetes-services/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.52c27f19915c264c7bc1efc2b4e3d5580439739afc56d30883489503c10d2005.css" integrity="sha256-UsJ/GZFcJkx7we/CtOPVWAQ5c5r8VtMIg0iVA8ENIAU=" rel="preload stylesheet" as="style">
+<link rel="canonical" href="http://localhost:1313/posts/o-que-e-o-sre/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.75c76f4d80b45a012687bb06b09454ff41710b7af8a79ed50ea52dfc4174e2e5.css" integrity="sha256-dcdvTYC0WgEmh7sGsJRU/0FxC3r4p57VDqUt/EF04uU=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -18,7 +22,7 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/entendendo-kubernetes-services/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/o-que-e-o-sre/">
 <noscript>
     <style>
         #theme-toggle,
@@ -115,21 +119,154 @@
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      Entendendo Kubernetes Services
+      SRE ou Site Reliability Engineering: Da criação no Google à era da IA (com breves incursões ao Mundo Invertido)
     </h1>
-    <div class="post-meta"><span title='2026-01-08 11:13:21 -0300 -03'>January 8, 2026</span>&nbsp;·&nbsp;<span>0 min</span>
+    <div class="post-meta"><span title='2026-01-08 14:20:09 -0300 -03'>January 8, 2026</span>&nbsp;·&nbsp;<span>4 min</span>
 
 </div>
   </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/images/monitoramento.png" alt="t5ep9">
+        
+</figure>
+  <div class="post-content"><h1 id="site-reliability-engineering">Site Reliability Engineering<a hidden class="anchor" aria-hidden="true" href="#site-reliability-engineering">#</a></h1>
+<h2 id="da-criação-no-google-à-era-da-ia-com-breves-incursões-ao-mundo-invertido">Da criação no Google à era da IA (com breves incursões ao Mundo Invertido)<a hidden class="anchor" aria-hidden="true" href="#da-criação-no-google-à-era-da-ia-com-breves-incursões-ao-mundo-invertido">#</a></h2>
+<p>Sistemas modernos são distribuídos, complexos e inevitavelmente falhos.<br>
+A pergunta nunca foi <em>“se”</em> algo vai quebrar, mas <em>“quando”</em> — e o que você fará quando isso acontecer.</p>
+<p>É nesse cenário que nasce o <strong>Site Reliability Engineering (SRE)</strong>: uma disciplina que une engenharia de software, operações e confiabilidade, com o objetivo de manter sistemas estáveis <strong>mesmo quando o caos tenta atravessar para produção</strong>.</p>
+<hr>
+<h2 id="a-origem-do-sre">A origem do SRE<a hidden class="anchor" aria-hidden="true" href="#a-origem-do-sre">#</a></h2>
+<p>O termo <strong>Site Reliability Engineering</strong> surgiu no início dos anos 2000 dentro do Google, a partir de uma ideia simples e poderosa:</p>
+<blockquote>
+<p><em>“Tratar operações como um problema de software.”</em></p>
+</blockquote>
+<p>Antes disso, operações eram majoritariamente manuais, reativas e baseadas em tentativa e erro.<br>
+O SRE muda essa lógica ao introduzir <strong>engenharia, métricas e automação</strong> como pilares da confiabilidade.</p>
+<p>O resultado foi um novo papel: engenheiros que escrevem código <strong>não para adicionar features</strong>, mas para garantir que o sistema continue funcionando enquanto elas são usadas por milhões de pessoas.</p>
+<hr>
+<h2 id="o-que-o-sre-realmente-faz">O que o SRE realmente faz?<a hidden class="anchor" aria-hidden="true" href="#o-que-o-sre-realmente-faz">#</a></h2>
+<p>SRE não é apenas “resolver incidentes”.</p>
+<p>A missão central é <strong>equilibrar velocidade de entrega com estabilidade</strong>, garantindo que o sistema evolua sem comprometer a experiência do usuário.</p>
+<p>Esse equilíbrio é sustentado por alguns conceitos fundamentais.</p>
+<hr>
+<h2 id="slis-slos-e-slas">SLIs, SLOs e SLAs<a hidden class="anchor" aria-hidden="true" href="#slis-slos-e-slas">#</a></h2>
+<p>Se você não mede, você não controla.</p>
+<ul>
+<li>
+<p><strong>SLI (Service Level Indicator)</strong><br>
+Métrica objetiva que mede o comportamento do sistema (latência, taxa de erro, disponibilidade).</p>
+</li>
+<li>
+<p><strong>SLO (Service Level Objective)</strong><br>
+Meta interna que define o nível aceitável de confiabilidade.</p>
+</li>
+<li>
+<p><strong>SLA (Service Level Agreement)</strong><br>
+Compromisso formal com clientes ou usuários.</p>
+</li>
+</ul>
+<p>Esses indicadores funcionam como sensores.<br>
+Sem eles, você só percebe o problema quando o sistema já entrou no <em>Mundo Invertido</em>.</p>
+<hr>
+<h2 id="error-budget">Error Budget<a hidden class="anchor" aria-hidden="true" href="#error-budget">#</a></h2>
+<p>O <strong>Error Budget</strong> é um dos conceitos mais importantes — e mais mal compreendidos — do SRE.</p>
+<p>Ele define <strong>quanto erro é aceitável</strong> dentro de um período.</p>
+<p>Enquanto há orçamento:</p>
+<ul>
+<li>é possível lançar mudanças</li>
+<li>experimentar</li>
+<li>inovar</li>
+</ul>
+<p>Quando o orçamento acaba:</p>
+<ul>
+<li>o foco muda para estabilidade</li>
+<li>deploys são desacelerados</li>
+<li>o sistema precisa se recuperar</li>
+</ul>
+<p>O Error Budget transforma confiabilidade em <strong>decisão técnica baseada em dados</strong>, não em opinião.</p>
+<hr>
+<h2 id="automação-como-princípio">Automação como princípio<a hidden class="anchor" aria-hidden="true" href="#automação-como-princípio">#</a></h2>
+<p>Se uma tarefa precisa ser feita repetidamente, ela deve ser automatizada.</p>
+<p>Automação reduz:</p>
+<ul>
+<li>erro humano</li>
+<li>tempo de resposta</li>
+<li>dependência de heróis de madrugada</li>
+</ul>
+<p>No SRE, automação não é otimização — é <strong>sobrevivência</strong>.</p>
+<hr>
+<h2 id="observability">Observability<a hidden class="anchor" aria-hidden="true" href="#observability">#</a></h2>
+<h3 id="logs-métricas-e-traces-ou-as-luzes-piscando-na-parede">Logs, métricas e traces (ou as luzes piscando na parede)<a hidden class="anchor" aria-hidden="true" href="#logs-métricas-e-traces-ou-as-luzes-piscando-na-parede">#</a></h3>
+<p>Observability é a capacidade de entender o estado interno de um sistema <strong>a partir de seus sinais externos</strong>.</p>
+<p>Ela se apoia em três pilares:</p>
+<ul>
+<li><strong>Logs</strong></li>
+<li><strong>Métricas</strong></li>
+<li><strong>Traces</strong></li>
+</ul>
+<p>Sem observability, incidentes viram adivinhação.<br>
+Com observability, é possível:</p>
+<ul>
+<li>detectar padrões</li>
+<li>correlacionar eventos</li>
+<li>entender causas reais, não apenas sintomas</li>
+</ul>
+<p>SRE sem observability é operar no escuro — e o escuro raramente é um bom lugar para sistemas críticos.</p>
+<hr>
+<h2 id="a-chegada-da-inteligência-artificial-no-sre">A chegada da Inteligência Artificial no SRE<a hidden class="anchor" aria-hidden="true" href="#a-chegada-da-inteligência-artificial-no-sre">#</a></h2>
+<p>Com o crescimento da complexidade dos sistemas, o volume de dados gerado se tornou impossível de analisar manualmente.</p>
+<p>É aqui que a <strong>IA entra no jogo</strong>.</p>
+<p>Hoje, técnicas de machine learning são usadas para:</p>
+<ul>
+<li>detecção automática de anomalias</li>
+<li>correlação de alertas</li>
+<li>redução de ruído</li>
+<li>previsão de falhas</li>
+<li>respostas automatizadas a incidentes</li>
+</ul>
+<p>O SRE deixa de ser apenas reativo e passa a atuar de forma <strong>preventiva e preditiva</strong>.</p>
+<p>Não é mais apenas fechar o incidente — é impedir que ele aconteça.</p>
+<hr>
+<h2 id="o-sre-moderno">O SRE moderno<a hidden class="anchor" aria-hidden="true" href="#o-sre-moderno">#</a></h2>
+<p>O SRE moderno aceita uma verdade fundamental:</p>
+<blockquote>
+<p><strong>Falhas são inevitáveis.</strong></p>
+</blockquote>
+<p>O foco não é eliminar falhas, mas criar sistemas que:</p>
+<ul>
+<li>resistem</li>
+<li>se recuperam rapidamente</li>
+<li>aprendem com cada incidente</li>
+</ul>
+<p>Postmortems sem culpa, melhoria contínua e automação são parte do processo.</p>
+<p>O <em>Mundo Invertido</em> não deixa de existir.<br>
+A diferença é se você está preparado quando ele aparece.</p>
+<hr>
+<h2 id="conclusão">Conclusão<a hidden class="anchor" aria-hidden="true" href="#conclusão">#</a></h2>
+<p>Site Reliability Engineering não é apenas uma função, nem apenas um conjunto de práticas.</p>
+<p>É uma forma de pensar sistemas:</p>
+<ul>
+<li>orientada por dados</li>
+<li>guiada por engenharia</li>
+<li>preparada para o inesperado</li>
+</ul>
+<p>Em um mundo cada vez mais distribuído, o SRE não impede o caos —<br>
+ele garante que o sistema continue funcionando <strong>apesar dele</strong>.</p>
+<hr>
+<p><em>Se os alertas começarem a piscar no meio da noite, a pergunta não é quem vai salvar o sistema.</em><br>
+<em>A pergunta é: ele foi projetado para sobreviver?</em></p>
+
+
+  </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/o-que-e-o-sre/">
-    <span class="title">« Prev</span>
+  <a class="next" href="http://localhost:1313/posts/girusio/">
+    <span class="title">Next »</span>
     <br>
-    <span>SRE ou Site Reliability Engineering: Da criação no Google à era da IA (com breves incursões ao Mundo Invertido)</span>
+    <span></span>
   </a>
 </nav>
 
