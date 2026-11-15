@@ -1,6 +1,6 @@
 +++
 title = "Lab Grafana Mimir com Prometheus e Docker Compose"
-date = 2026-11-15T19:30:00-03:00
+date = 2026-11-15T18:00:00-03:00
 draft = false
 tags = ["observabilidade", "prometheus", "mimir", "grafana", "docker"]
 
