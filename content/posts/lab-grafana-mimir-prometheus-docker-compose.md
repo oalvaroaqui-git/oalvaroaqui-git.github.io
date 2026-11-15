@@ -272,4 +272,4 @@ Alguns caminhos naturais para evoluir o lab:
 - **Ruler**: mover as regras de gravação e alerta do Prometheus para o ruler do Mimir, centralizando a avaliação.
 - **Modo microsserviços**: quebrar o single-binary em componentes separados para entender o papel de cada um sob carga.
 
-O código completo do laboratório está no meu GitHub. Referências: [documentação do Grafana Mimir](https://grafana.com/docs/mimir/latest/) e [remote_write do Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote_write).
+O código completo do laboratório está no meu GitHub: [oalvaroaqui-git/lab_mimir](https://github.com/oalvaroaqui-git/lab_mimir). Referências: [documentação do Grafana Mimir](https://grafana.com/docs/mimir/latest/) e [remote_write do Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote_write).
