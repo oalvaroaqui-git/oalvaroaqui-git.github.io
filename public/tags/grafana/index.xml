@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grafana on oalvaroaqui</title>
+    <link>http://localhost:1313/tags/grafana/</link>
+    <description>Recent content in Grafana on oalvaroaqui</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 15 Nov 2026 18:00:00 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lab Grafana Mimir com Prometheus e Docker Compose</title>
+      <link>http://localhost:1313/posts/lab-grafana-mimir-prometheus-docker-compose/</link>
+      <pubDate>Sun, 15 Nov 2026 18:00:00 -0300</pubDate>
+      <guid>http://localhost:1313/posts/lab-grafana-mimir-prometheus-docker-compose/</guid>
+      <description>&lt;h2 id=&#34;por-que-o-prometheus-sozinho-não-basta&#34;&gt;Por que o Prometheus sozinho não basta&lt;/h2&gt;&#xA;&lt;p&gt;O Prometheus resolve muito bem a coleta e a consulta de métricas, mas o TSDB local dele não foi desenhado para retenção de longo prazo, alta disponibilidade nem multi-tenancy. Quando o disco enche ou a instância morre, o histórico vai junto.&lt;/p&gt;&#xA;&lt;p&gt;O &lt;a href=&#34;https://grafana.com/oss/mimir/&#34;&gt;Grafana Mimir&lt;/a&gt; ataca exatamente esse problema: é um backend de métricas horizontalmente escalável, sucessor do Cortex, que recebe séries via &lt;code&gt;remote_write&lt;/code&gt; e expõe uma API compatível com a do Prometheus para consulta. Na prática, o Prometheus vira um agente de coleta e o Mimir assume o papel de armazenamento central.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

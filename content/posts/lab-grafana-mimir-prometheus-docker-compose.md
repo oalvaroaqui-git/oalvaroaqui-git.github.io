@@ -5,8 +5,8 @@ draft = false
 tags = ["observabilidade", "prometheus", "mimir", "grafana", "docker"]
 
 [cover]
-    image = "/images/mimir-grafana-explore.png"
-    alt = "Grafana Explore consultando métricas no Mimir"
+    image = "/images/mimir-logo.png"
+    alt = "Logo do Grafana Mimir"
     relative = false
 +++
 

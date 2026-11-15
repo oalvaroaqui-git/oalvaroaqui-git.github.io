@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on oalvaroaqui</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on oalvaroaqui</description>
-    <generator>Hugo -- 0.152.2</generator>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 08 Jan 2026 14:20:09 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 18:00:00 -0300</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SRE ou Site Reliability Engineering: Da criação no Google à era da IA (com breves incursões ao Mundo Invertido)</title>
       <link>http://localhost:1313/posts/o-que-e-o-sre/</link>
       <pubDate>Thu, 08 Jan 2026 14:20:09 -0300</pubDate>
       <guid>http://localhost:1313/posts/o-que-e-o-sre/</guid>
-      <description>&lt;h1 id=&#34;site-reliability-engineering&#34;&gt;Site Reliability Engineering&lt;/h1&gt;
-&lt;h2 id=&#34;da-criação-no-google-à-era-da-ia-com-breves-incursões-ao-mundo-invertido&#34;&gt;Da criação no Google à era da IA (com breves incursões ao Mundo Invertido)&lt;/h2&gt;
-&lt;p&gt;Sistemas modernos são distribuídos, complexos e inevitavelmente falhos.&lt;br&gt;
-A pergunta nunca foi &lt;em&gt;“se”&lt;/em&gt; algo vai quebrar, mas &lt;em&gt;“quando”&lt;/em&gt; — e o que você fará quando isso acontecer.&lt;/p&gt;
-&lt;p&gt;É nesse cenário que nasce o &lt;strong&gt;Site Reliability Engineering (SRE)&lt;/strong&gt;: uma disciplina que une engenharia de software, operações e confiabilidade, com o objetivo de manter sistemas estáveis &lt;strong&gt;mesmo quando o caos tenta atravessar para produção&lt;/strong&gt;.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;site-reliability-engineering&#34;&gt;Site Reliability Engineering&lt;/h1&gt;&#xA;&lt;h2 id=&#34;da-criação-no-google-à-era-da-ia-com-breves-incursões-ao-mundo-invertido&#34;&gt;Da criação no Google à era da IA (com breves incursões ao Mundo Invertido)&lt;/h2&gt;&#xA;&lt;p&gt;Sistemas modernos são distribuídos, complexos e inevitavelmente falhos.&lt;br&gt;&#xA;A pergunta nunca foi &lt;em&gt;“se”&lt;/em&gt; algo vai quebrar, mas &lt;em&gt;“quando”&lt;/em&gt; — e o que você fará quando isso acontecer.&lt;/p&gt;&#xA;&lt;p&gt;É nesse cenário que nasce o &lt;strong&gt;Site Reliability Engineering (SRE)&lt;/strong&gt;: uma disciplina que une engenharia de software, operações e confiabilidade, com o objetivo de manter sistemas estáveis &lt;strong&gt;mesmo quando o caos tenta atravessar para produção&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lab Grafana Mimir com Prometheus e Docker Compose</title>
+      <link>http://localhost:1313/posts/lab-grafana-mimir-prometheus-docker-compose/</link>
+      <pubDate>Sun, 15 Nov 2026 18:00:00 -0300</pubDate>
+      <guid>http://localhost:1313/posts/lab-grafana-mimir-prometheus-docker-compose/</guid>
+      <description>&lt;h2 id=&#34;por-que-o-prometheus-sozinho-não-basta&#34;&gt;Por que o Prometheus sozinho não basta&lt;/h2&gt;&#xA;&lt;p&gt;O Prometheus resolve muito bem a coleta e a consulta de métricas, mas o TSDB local dele não foi desenhado para retenção de longo prazo, alta disponibilidade nem multi-tenancy. Quando o disco enche ou a instância morre, o histórico vai junto.&lt;/p&gt;&#xA;&lt;p&gt;O &lt;a href=&#34;https://grafana.com/oss/mimir/&#34;&gt;Grafana Mimir&lt;/a&gt; ataca exatamente esse problema: é um backend de métricas horizontalmente escalável, sucessor do Cortex, que recebe séries via &lt;code&gt;remote_write&lt;/code&gt; e expõe uma API compatível com a do Prometheus para consulta. Na prática, o Prometheus vira um agente de coleta e o Mimir assume o papel de armazenamento central.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
